@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PracticeComponent implements OnInit {
   username: string = '';
+  showParagraph: boolean = false;
+  clickArray: number[] = [];
+  atFifthItem = 'none';
   constructor() { }
 
   ngOnInit() {
@@ -16,4 +19,9 @@ export class PracticeComponent implements OnInit {
     this.username = '';
   }
 
+  toggleParagraph(event: Event){
+    this.showParagraph = !this.showParagraph;
+    this.clickArray.push(Date.now());
+  }
+  
 }

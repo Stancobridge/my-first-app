@@ -1,3 +1,13 @@
-<input class="form-control"  type="text" [(ngModel)]="username">
-<button class="btn btn-primary"  (click)="resetUsername()" [disabled]="username === '' ">Click</button>
-<p>{{username}}</p>
+<button (click)="toggleParagraph($event)" class="btn btn-info">Diplay Details</button>
+<p *ngIf="showParagraph">
+  Secrete Password = tuna
+  <br />
+</p>
+  <ul>
+    <li 
+      *ngFor="let date of clickArray; let i = index"
+      [ngStyle]="{ 'background-color': i >= 4 ? 'blue' : 'transparent'}"
+      
+      >{{date}}</li>
+  </ul>
+
