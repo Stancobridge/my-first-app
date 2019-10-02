@@ -11,6 +11,7 @@ export class ServersComponent implements OnInit {
   htmlInput: HTMLInputElement;
   serverName: string;
   serverCreated: boolean = false;
+  servers: string[] = ['Server 1', 'Server 2', ]
   constructor() {
     setTimeout(() :void => {
       this.allowNewServers =  !this.allowNewServers
@@ -23,6 +24,7 @@ export class ServersComponent implements OnInit {
   onCreateServer(): void {
     this.serverCreated = true
     this.serverName = "Server is created";
+    this.servers.push(this.serverName)
     if(this.htmlInput){
       this.htmlInput.value = null
     }

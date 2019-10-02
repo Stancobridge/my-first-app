@@ -1,10 +1,4 @@
 <label>Server Name</label>
-<input 
-  type="text"
-  (input)="updateServer($event)"
-  class="form-control"
-  >
-
   <input 
   type="text"
   [(ngModel)]="serverName"
@@ -23,5 +17,4 @@
   <p>No server was created</p>
 </ng-template>
 
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
